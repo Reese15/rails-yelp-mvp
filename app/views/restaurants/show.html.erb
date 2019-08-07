@@ -1,0 +1,10 @@
+<h1>Restaurant info</h1>
+<p>Find me in app/views/index/show.html.erb</p>
+<% @restaurants.each do |restaurant| %>
+    <tr>
+      <th scope="row"></th>
+      <h1><%= restaurant.name %></h1>
+      <h2><%= restaurant.address %></h2>
+      <p><%= restaurant.category %></p>
+      <p><%= restaurant.phone_number %></p>
+    <% end %>

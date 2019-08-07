@@ -1,0 +1,35 @@
+<hr>
+<div class='container'>
+  <h1>List of restaurants</h1>
+  <hr>
+  <table class='table table-striped'>
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Category</th>
+      <th scope="col">Phone number</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+    <tr>
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.address %></td>
+      <td><%= restaurant.category %></td>
+      <td><%= restaurant.phone_number %></td>
+      <td><button type="button" class="btn btn-light">
+    <%= link_to "Info", restaurant_path(restaurant)%>
+  </button></td>
+    <% end %>
+   </tr>
+  <br>
+  <button type="button" class="btn btn-light">
+    <%= link_to "New restaurant", new_restaurant_path %>
+  </button>
+  <br>
+
+</div>
+
+
